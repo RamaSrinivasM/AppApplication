@@ -1,0 +1,56 @@
+apply plugin: 'com.android.library'
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'rama-like'
+
+    publishedGroupId = 'com.android.rama'
+    libraryName = 'rama-like'
+    artifact = 'rama-like'
+
+    libraryDescription = 'Sample Library'
+
+    siteUrl = 'https://www.getdropx.com'
+    gitUrl = 'https://bitbucket.org/ramanil/socialapp.git'
+
+    libraryVersion = '0.0.1'
+
+    developerId = 'ramasrinivasm'
+    developerName = 'Rama Srinivas'
+    developerEmail = 'srinivas.m@way2online.co.in'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.1"
+
+    defaultConfig {
+        minSdkVersion 9
+        targetSdkVersion 22
+        versionCode 1
+        versionName "0.0.1"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+//apply from: 'https://raw.githubusercontent.com/ramasrinivasm/jcenter/master/installv.gradle'
+//apply from: 'https://raw.githubusercontent.com/ramasrinivasm/jcenter/master/bintrayv.gradle'
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
